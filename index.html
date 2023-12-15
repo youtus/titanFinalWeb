@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/amazon-cognito-identity-js/4.5.9/amazon-cognito-identity.min.js"></script>
+    <script src="cognito.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
+    <title>Titan</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="signin.html">Connexion</a>
+            <a href="signup.html">Inscription</a>
+        </nav>
+    </header>
+        <h1>Titan- Poster des messages</h1>
+        <form>
+          <label for="message">Message:</label>
+          <input type="text" id="message" name="message"><br><br>
+          <input type="submit" value="Poster">
+        </form>
+        <div id="messages"></div>
+        <script>
+          const form = document.querySelector('form');
+          const messageInput = document.querySelector('#message');
+          const messagesDiv = document.querySelector('#messages');
+          form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const message = messageInput.value;
+            const messageElement = document.createElement('p');
+            messageElement.textContent = message;
+            messagesDiv.insertBefore(messageElement, messagesDiv.firstChild);
+            messageInput.value = '';
+          });
+        </script>
+
+
+</body></html>

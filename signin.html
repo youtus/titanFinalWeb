@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+<script src="js/amazon-cognito-identity.min.js"></script>
+
+    <script src="signin.js" defer></script>
+
+
+    <title>Titan - Connexion</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html">Retour</a>
+        </nav>
+    </header>
+    <div class="background"></div>
+
+<div class="container">
+    <div class="content">
+        <div class="text-sci">
+            <h2 class="logo">Content de vous revoir !<br>
+               <p>Ajoutez-nous sur nos réseaux sociaux</p>
+        
+                <div class="social-icons">
+                    <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                </div>
+                </div>
+    </div>
+
+    <div class="logreg-box">
+        <div class="form-box login">
+            <form action="" method="post" name="login" id="formSignin">
+                <h2>Connexion</h2>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="txt" name="nom" id="email" required>
+                    <label>mail  Utilisateur</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed" id="password"></ion-icon>
+                    </span>
+                    <input type="password" name="password" required>
+                    <label>mot de passe</label>
+                </div>
+                <button type="submit" name="submit-login" class="btn">Se connecter</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</body></html>
